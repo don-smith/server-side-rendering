@@ -5,6 +5,7 @@ var hbs = require('express-handlebars')
 var routes = require('./routes')
 
 var app = express()
+module.exports = app
 
 // Middleware
 app.engine('hbs', hbs({
@@ -16,5 +17,3 @@ app.set('views', path.join(__dirname, 'views'))
 
 // Routes
 app.get('/', routes.home)
-
-module.exports = app
