@@ -1,23 +1,37 @@
 # Server-side Rendering
 
-Clone this repo
-Install `express`, `express-handlebars` as dependencies
-Install `tape`, and `tap-spec` as dev dependencies
-Apply the `express-handlebars` middleware using
+## Getting started
 
-  // Middleware
-  app.engine('hbs', hbs({
-      ext: hbs,
-      defaultLayout: 'main'
-    }))
-  app.set('view engine', 'hbs')
-  app.set('views', path.join(__dirname, 'views'))
+* After cloning this repo, install dependencies with `npm install`
+* To debug the server: `npm run debug`
+* To start the server: `npm start`
+* To run the tests: `npm test`
 
+## Notes
 
+These are the noteworthy parts of the code you should be sure you feel comfortable with.
 
+### Handlebars configuration
 
+The `express-handlebars` module is configured in `server.js`.
 
-For more information:
+```js
+// Middleware
+app.engine('hbs', hbs({
+    extname: 'hbs',
+    defaultLayout: 'main'
+  }))
+app.set('view engine', 'hbs')
+app.set('views', path.join(__dirname, 'views'))
+```
 
-https://github.com/ericf/express-handlebars
-http://handlebarsjs.com
+This defines the file extension of our Handlebars templates (`extname: 'hbs'`) and the name of our `defaultLayout` (`main.hbs`).
+
+_more notes forthcoming ..._
+
+## Further reading
+
+For more information, check out these links:
+
+* http://handlebarsjs.com
+* https://github.com/ericf/express-handlebars
