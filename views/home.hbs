@@ -1,0 +1,13 @@
+{{> header}}
+
+{{#if showList}}
+  Fruit!
+  <ul>
+    {{#each fruitList}}
+      {{> fruit}}
+    {{/each}}
+  </ul>
+  Ok, now you can <a href="/">hide the list</a>.
+{{else}}
+  <a href="/?showlist=true">Show me the list</a>, please.
+{{/if}}
