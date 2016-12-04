@@ -6,7 +6,7 @@
   "scripts": {
     "debug": "devtool index --watch",
     "test": "tape tests/**/*-test.js | tap-spec",
-    "start": "node index.js"
+    "start": "node --inspect index.js"
   },
   "dependencies": {
     "express": "^4.14.0",
