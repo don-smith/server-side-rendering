@@ -15,7 +15,7 @@
   "devDependencies": {
     "cheerio": "^0.22.0",
     "devtool": "^2.3.0",
-    "supertest": "^2.0.1",
+    "supertest": "^4.0.2",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.2"
   },
